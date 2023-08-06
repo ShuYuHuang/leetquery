@@ -7,7 +7,7 @@ from typing import List
 
 __all__  = ["get_submissions"]
 
-def get_submissions(username: str="syhaung", limit: int= ) -> List[str]:
+def get_submissions(username: str="syhaung", limit: int= 12) -> List[str]:
     url = "https://leetcode.com/graphql?"
     headers = {'Content-Type': 'application/json'}
     query = """
