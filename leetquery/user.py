@@ -3,10 +3,11 @@
 # Licensed under the MIT License
 import requests
 import json
+from typing import List
 
 __all__  = ["get_submissions"]
 
-def get_submissions(username="syhaung"):
+def get_submissions(username: str="syhaung", limit: int= ) -> List[str]:
     url = "https://leetcode.com/graphql?"
     headers = {'Content-Type': 'application/json'}
     query = """
