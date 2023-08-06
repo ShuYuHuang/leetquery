@@ -20,7 +20,7 @@ def get_submissions(username: str="syhaung", limit: int= 12) -> List[str]:
         }
     }
     """
-    variables = {'username': username, 'limit': 50}
+    variables = {'username': username, 'limit': limit}
     payload = {
             'query': query,
             'operationName': 'recentAcSubmissions',
