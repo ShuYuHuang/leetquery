@@ -1,12 +1,14 @@
 # Leetcode Query
-A library for retriving informations from Leetcode
+A library for retriving Human Resource information from Leetcode.
 
-## Install 🚧
-
+## Install
+``` shell
+    pip install leetquery
+```
 ## Usage
 ### Retriving User Submissions
 ``` python
-from leetquery.user import get_submissions
+from leetquery import get_submissions
 
 submissions = get_submissions(username="syhaung", limits)
 ```
