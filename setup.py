@@ -13,7 +13,7 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = "leetquery"
 DESCRIPTION = "Query and analyze data from leetcode"
-URL = "https://github.com/ShuYuHuang/leetcode-query"
+URL = "https://github.com/ShuYuHuang/leetquery"
 EMAIL = "b123767195@gmail.com"
 AUTHOR = "Shu-Yu Huang"
 REQUIRES_PYTHON = ">=3.7.0"
