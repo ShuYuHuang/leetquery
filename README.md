@@ -9,14 +9,27 @@ A library for retriving Human Resource information from Leetcode.
     pip install leetquery
 ```
 ## Usage
-### Retriving User Submissions
+### Retrieving User Submissions
 Just enter user name and limit of query!
 ``` python
-from leetquery import get_submissions
+from leetquery.user import get_submissions
 
 submissions = get_submissions(username="syhaung", limit=12)
 ```
 return value:
 ```
 ["question1", "question2", ...]
+```
+
+### Retrieving Problem Discription
+Just enter probelm nameSlug and voila~~
+``` python
+from leetquery.problem import get_discription
+
+submissions = get_discription(problemname="two-sum")
+```
+return value:
+``` html
+<p>Given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>
+...
 ```
