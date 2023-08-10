@@ -6,7 +6,7 @@ Licensed under the MIT License
 Query info from Leetcode users
 """
 import json
-from typing import List
+from typing import List, Union
 import requests
 
 __all__  = ["get_submissions"]
@@ -15,7 +15,7 @@ def get_submissions(
         username: str="syhaung",
         limit: int=12,
         title_only: bool=True
-    )-> List[str|dict]:
+    )-> List[Union[str, dict]]:
     """
     Get submissions from user
     Args:
@@ -23,7 +23,7 @@ def get_submissions(
         limit (int): number of submissions to return
         title_only (bool): whether to return only title or not
     Returns:
-        List[str]: list of submissions
+        List[str | dict]: list of submissions, if title_only==False, then return a dictionary of query
     """
     url = "https://leetcode.com/graphql?"
     headers = {'Content-Type': 'application/json'}
