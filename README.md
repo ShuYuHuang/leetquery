@@ -21,8 +21,9 @@ return value:
 ["question1", "question2", ...]
 ```
 
-### Retrieving Problem Discription
-Just enter probelm nameSlug and voila~~
+### For Problems
+#### Retrieving Problem Discription
+Just enter probelm nameSlug and get the problem discription in HTML~~
 ``` python
 from leetquery.problem import get_discription
 
@@ -32,4 +33,20 @@ return value:
 ``` html
 <p>Given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>
 ...
+```
+#### Retrieving Problem Statistics
+Get the statistics for the problem in a JSON format, help you quantize difficulties
+``` python
+from leetquery.problem import get_stats
+stat = get_stats("two-sum")
+assert isinstance(stat, dict) and \
+    list(stat.keys()) == ['totalAccepted', 'totalSubmission', 'totalAcceptedRaw', 'totalSubmissionRaw', 'acRate']
+```
+return value:
+``` json
+{
+    'totalAccepted': '10.4M',
+    'totalSubmission': '20.6M',
+    ...
+}
 ```

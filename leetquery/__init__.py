@@ -4,4 +4,7 @@ from . import user
 from .user import get_submissions
 
 from . import problem
-from .problem import get_discription
+from .problem import (
+    get_discription,
+    get_stats
+)

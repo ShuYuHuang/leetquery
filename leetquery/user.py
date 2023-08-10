@@ -23,7 +23,8 @@ def get_submissions(
         limit (int): number of submissions to return
         title_only (bool): whether to return only title or not
     Returns:
-        List[str | dict]: list of submissions, if title_only==False, then return a dictionary of query
+        List[str | dict]: list of submissions, 
+            if title_only==False, then return a dictionary of query
     """
     url = "https://leetcode.com/graphql?"
     headers = {'Content-Type': 'application/json'}
