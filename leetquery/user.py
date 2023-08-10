@@ -9,7 +9,7 @@ import requests
 
 __all__  = ["get_submissions"]
 
-def get_submissions(username: str="syhaung", limit: int= 12) -> List[str]:
+def get_submissions(username: str="syhaung", limit: int=12, title_only: bool=True) -> List[str]:
     """
         Gwt
     """
@@ -38,4 +38,8 @@ def get_submissions(username: str="syhaung", limit: int= 12) -> List[str]:
         data=json.dumps(payload),
         timeout=1.5
     ).json()
-    return [x["title"] for x in response["data"]["recentAcSubmissionList"]]
+
+    if title_only:
+        return [x["title"] for x in response["data"]["recentAcSubmissionList"]]
+    else:
+        return [x for x in response["data"]["recentAcSubmissionList"]]

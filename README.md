@@ -11,7 +11,7 @@ Just enter user name and limit of query!
 ``` python
 from leetquery import get_submissions
 
-submissions = get_submissions(username="syhaung", limits=12)
+submissions = get_submissions(username="syhaung", limit=12)
 ```
 return value:
 ```
