@@ -39,8 +39,6 @@ Get the statistics for the problem in a JSON format, help you quantize difficult
 ``` python
 from leetquery.problem import get_stats
 stat = get_stats("two-sum")
-assert isinstance(stat, dict) and \
-    list(stat.keys()) == ['totalAccepted', 'totalSubmission', 'totalAcceptedRaw', 'totalSubmissionRaw', 'acRate']
 ```
 return value:
 ``` json
